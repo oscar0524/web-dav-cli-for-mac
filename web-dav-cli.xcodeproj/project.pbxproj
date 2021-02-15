@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		F921261C25D957B1002D7607 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F921261B25D957B1002D7607 /* main.swift */; };
+		F921262425D9592C002D7607 /* FilesProvider in Frameworks */ = {isa = PBXBuildFile; productRef = F921262325D9592C002D7607 /* FilesProvider */; };
+		F921262825DA598F002D7607 /* WebDavEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F921262725DA598F002D7607 /* WebDavEvent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,7 @@
 /* Begin PBXFileReference section */
 		F921261825D957B1002D7607 /* web-dav-cli */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "web-dav-cli"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F921261B25D957B1002D7607 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		F921262725DA598F002D7607 /* WebDavEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDavEvent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F921262425D9592C002D7607 /* FilesProvider in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				F921261B25D957B1002D7607 /* main.swift */,
+				F921262725DA598F002D7607 /* WebDavEvent.swift */,
 			);
 			path = "web-dav-cli";
 			sourceTree = "<group>";
@@ -78,6 +83,9 @@
 			dependencies = (
 			);
 			name = "web-dav-cli";
+			packageProductDependencies = (
+				F921262325D9592C002D7607 /* FilesProvider */,
+			);
 			productName = "web-dav-cli";
 			productReference = F921261825D957B1002D7607 /* web-dav-cli */;
 			productType = "com.apple.product-type.tool";
@@ -106,6 +114,9 @@
 				Base,
 			);
 			mainGroup = F921260F25D957B1002D7607;
+			packageReferences = (
+				F921262225D9592C002D7607 /* XCRemoteSwiftPackageReference "FileProvider" */,
+			);
 			productRefGroup = F921261925D957B1002D7607 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -121,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F921261C25D957B1002D7607 /* main.swift in Sources */,
+				F921262825DA598F002D7607 /* WebDavEvent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +292,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F921262225D9592C002D7607 /* XCRemoteSwiftPackageReference "FileProvider" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/amosavian/FileProvider.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.26.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F921262325D9592C002D7607 /* FilesProvider */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F921262225D9592C002D7607 /* XCRemoteSwiftPackageReference "FileProvider" */;
+			productName = FilesProvider;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F921261025D957B1002D7607 /* Project object */;
 }
